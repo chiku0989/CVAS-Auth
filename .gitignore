@@ -1,0 +1,52 @@
+# --- IDE & System Files ---
+.vscode/
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+Thumbs.db
+
+# --- Dependency Folders ---
+# This ignores node_modules in the root AND in all sub-services
+node_modules/
+jspm_packages/
+
+# --- Environment & Secrets (VITAL) ---
+# Never commit these files as they contain your JWT_SECRET and DB URIs
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.env
+*.env.local
+
+# --- Build & Compiled Output ---
+# Ignores the 'dist' or 'build' folders in any service
+dist/
+build/
+out/
+*.tsbuildinfo
+
+# --- Logs ---
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# --- Testing ---
+coverage/
+.nyc_output
+
+# --- OS & Tooling ---
+.npm
+.eslintcache
+.stylelintcache
+pnpm-lock.yaml
+package-lock.json
+yarn.lock
