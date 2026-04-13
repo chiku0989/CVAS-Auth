@@ -24,7 +24,7 @@ export const connectRedis = async (): Promise<RedisClientType> => {
 
     await client.connect();
 
-    await client.configSet('maxmemory-policy', REDIS_CONFIG.policy);
+    // await client.configSet('maxmemory-policy', REDIS_CONFIG.policy);
 
   }
 
