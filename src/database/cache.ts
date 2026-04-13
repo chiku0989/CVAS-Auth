@@ -3,7 +3,6 @@ import { createClient, type RedisClientType } from 'redis';
 import { logger } from "../utils/log.js";
 
 const REDIS_CONFIG = {
-  maxMemory: '512mb',
   prefix: 'AUTH',
   policy: 'allkeys-lru', 
 };
@@ -25,10 +24,8 @@ export const connectRedis = async (): Promise<RedisClientType> => {
 
     await client.connect();
 
-    await client.configSet('maxmemory', REDIS_CONFIG.maxMemory);
     await client.configSet('maxmemory-policy', REDIS_CONFIG.policy);
 
-    logger.info(`Redis ready: ${REDIS_CONFIG.maxMemory} limit, ${REDIS_CONFIG.policy} policy.`);
   }
 
 
