@@ -6,7 +6,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export const authPool = new Piscina({
     
-    filename: path.resolve(__dirname, 'password.worker.ts'),
+    filename: path.resolve(__dirname, 'password.worker.js'),
     minThreads: 2,
     maxThreads: 4
 });
